@@ -41,6 +41,17 @@ def fibonacci_sequence(n):
     """
     Generate and return the first n numbers in the Fibonacci sequence.
     """
-    if not isinstance(n, int):
-        raise TypeError("n must be an integer")
+    
+    if n == 0:
+        return []
+    elif n == 1:
+        return [0]
+    
+    else:
+        init_list = [0,1]
+        for _ in range(2, n):
+            init_list.append(init_list[-1] + init_list[-2])
+        return init_list
+    
+print(fibonacci_sequence(5))
     
