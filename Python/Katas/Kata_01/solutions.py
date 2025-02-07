@@ -18,7 +18,11 @@ def find_largest_number(numbers):
     """
     Find and return the largest number in a list of integers.
     """
-    pass
+    largest_num = numbers[0]
+    for number in numbers:
+        if number >= largest_num:
+            largest_num = number
+    return largest_num
 
 
 def count_vowels(s):
