@@ -31,7 +31,7 @@ def count_vowels(s):
     """
     vowels = "aeiou"
     counter = 0
-    for character in vowels:
+    for character in s:
         if character.lower() in vowels:
             counter += 1
     return counter
@@ -41,4 +41,6 @@ def fibonacci_sequence(n):
     """
     Generate and return the first n numbers in the Fibonacci sequence.
     """
-    pass
+    if not isinstance(n, int):
+        raise TypeError("n must be an integer")
+    

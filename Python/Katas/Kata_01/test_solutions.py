@@ -1,7 +1,7 @@
 # test_todo.py
 
 import unittest
-from todo import add_two_numbers, reverse_string, find_largest_number, count_vowels, fibonacci_sequence
+from solutions import add_two_numbers, reverse_string, find_largest_number, count_vowels, fibonacci_sequence
 
 class TestTodoFunctions(unittest.TestCase):
 
