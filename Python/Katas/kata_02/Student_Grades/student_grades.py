@@ -11,6 +11,8 @@ def add_student(students: dict,  name: str, student_id: str, grade: list[int, in
 def calculate_average(students: dict, student_id: str) -> float:
     """Computes the average grade of a student"""
     
+    return sum(students[student_id]["grade"])/len(students[student_id]["grade"])
+
 
 
 def has_passed(students: dict, student_id: str)-> bool:
