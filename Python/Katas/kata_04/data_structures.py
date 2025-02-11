@@ -89,4 +89,5 @@ def find_max_2d_list(data):
 
 def unique_values_from_2d_list(data):
     """Returns a list of unique values from a 2D list."""
-    pass
+    
+    return list(set([num for i in range(len(data)) for num in data[i]]))
