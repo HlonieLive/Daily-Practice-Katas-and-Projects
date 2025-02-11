@@ -52,8 +52,7 @@ Coding katas offer several benefits:
 
 ## How It Works 
 
-#### Every day, I select one or more katas based on difficulty level (e.g., beginner, intermediate, advanced) and topic relevance. After solving the problem, I commit the solution to this repository along
-with any notes or reflections. Here’s how I approach each kata: 
+#### Every day, I select one or more katas based on difficulty level (e.g., beginner, intermediate, advanced) and topic relevance. After solving the problem, I commit the solution to this repository along with any notes or reflections. Here’s how I approach each kata: 
 
     Understand the Problem : Read the description carefully and clarify requirements if needed.
     Plan the Solution : Break down the problem into smaller steps and outline the approach.
