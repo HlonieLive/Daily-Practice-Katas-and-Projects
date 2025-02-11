@@ -29,11 +29,13 @@ def display_person_info(person):
 
 def get_keys(person):
     """Returns a list of all keys in the given person dictionary."""
-    pass
+    
+    return [key for key in person.keys()]
 
 def get_values(person):
     """Returns a list of all values in the given person dictionary."""
-    pass
+    
+    return [value for value in person.values()]
 
 def create_coordinates(x, y):
     """Creates a tuple representing coordinates."""
