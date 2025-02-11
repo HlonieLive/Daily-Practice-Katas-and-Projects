@@ -27,10 +27,13 @@ def star_conversion(word, index):
         word (string): The word to be iterated 
         index (int): The index to be replaced
     """
-    
-
-
-print(star_conversion("lovely", 3))
+    final_word = ""
+    for num in range(len(word)):
+        if num == index-1:
+            final_word += "*"
+        else:
+            final_word += word[num]
+    return final_word
 
 
 def find_exponent(a, n):
@@ -44,7 +47,6 @@ def find_exponent(a, n):
         a (int): The base int
         n (_type_): The solution
     """
-
 
 def reverse_cases(word_list):
     """Create a program to reverse the case of all strings. For those strings, which contain no letters, reverse the strings.
