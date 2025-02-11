@@ -39,7 +39,8 @@ def get_values(person):
 
 def create_coordinates(x, y):
     """Creates a tuple representing coordinates."""
-    pass
+    
+    return x, y
 
 def append_to_list(lst, element):
     """Appends an element to the given list and returns the updated list."""
