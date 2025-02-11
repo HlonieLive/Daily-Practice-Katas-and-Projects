@@ -44,7 +44,9 @@ def create_coordinates(x, y):
 
 def append_to_list(lst, element):
     """Appends an element to the given list and returns the updated list."""
-    pass
+    
+    lst.append(element)
+    return lst
 
 def add_to_set(s, element):
     """Adds an element to the given set and returns the updated set."""
