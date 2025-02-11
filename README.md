@@ -49,7 +49,8 @@ Coding katas offer several benefits:
      
 
 #### Each language brings unique challenges and opportunities for growth. By practicing across all of them, I strive to become a well-rounded developer. 
-How It Works 
+
+## How It Works 
 
 #### Every day, I select one or more katas based on difficulty level (e.g., beginner, intermediate, advanced) and topic relevance. After solving the problem, I commit the solution to this repository along
 with any notes or reflections. Here’s how I approach each kata: 
