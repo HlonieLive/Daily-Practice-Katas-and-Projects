@@ -74,11 +74,13 @@ def get_element_at_index(lst, index):
 
 def double_values(lst):
     """Returns a new list with each element in the input list doubled."""
-    pass
+    
+    return [num * 2 for num in lst]
 
 def sum_2d_list(data):
     """Calculates the sum of all elements in a 2D list."""
-    pass
+    
+    return sum([num for i in range(len(data)) for num in data[i]])
 
 def find_max_2d_list(data):
     """Finds the maximum value in a 2D list."""
