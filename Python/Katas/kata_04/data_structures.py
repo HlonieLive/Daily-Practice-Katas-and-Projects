@@ -84,7 +84,8 @@ def sum_2d_list(data):
 
 def find_max_2d_list(data):
     """Finds the maximum value in a 2D list."""
-    pass
+    
+    return max([num for i in range(len(data)) for num in data[i]])
 
 def unique_values_from_2d_list(data):
     """Returns a list of unique values from a 2D list."""
