@@ -57,6 +57,28 @@ def reverse_cases(word_list):
     Args:
         word_list (list): List to be reversed
     """
+    final_list = []
+    for word in word_list:
+        word1 = ""
+        word2 = ""
+        for char in word:
+            if char.isupper():
+                word1 += char.lower()
+            elif char.islower():
+                word1 += char.upper()
+            else:
+                word2 += char
+        if word1 == "":
+            final_list.append(word2[::-1])
+        else:
+            final_list.append(word1)
+    return final_list
+
+print(reverse_cases(['cat', 'catatatatctsa', 'abcdefhijklmnop', '124259239185125', '', 'foo', 'unique']))
+            
+
+
+
 
 
 def month_days(month):
