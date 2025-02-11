@@ -50,7 +50,9 @@ def append_to_list(lst, element):
 
 def add_to_set(s, element):
     """Adds an element to the given set and returns the updated set."""
-    pass
+    
+    s.add(element)
+    return s
 
 def process_data(data):
     """Processes a list of tuples into a dictionary where keys are names and values are sets of ages."""
