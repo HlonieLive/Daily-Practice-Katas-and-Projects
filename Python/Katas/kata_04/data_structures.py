@@ -67,7 +67,10 @@ def process_data(data):
 
 def get_element_at_index(lst, index):
     """Returns the element at the specified index in the list. Raises IndexError if out of bounds."""
-    pass
+    
+    if index > len(lst):
+        raise IndexError()
+    return lst[index]
 
 def double_values(lst):
     """Returns a new list with each element in the input list doubled."""
