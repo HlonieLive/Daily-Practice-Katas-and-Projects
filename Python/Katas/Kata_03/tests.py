@@ -6,7 +6,7 @@ class TestCase(unittest.TestCase):
     def test_filters(self):
         for number in filter_numbers(4,7):
             self.assertIsInstance(number, int, "Items in list must be integers")
-        self.assertIsInstance(filter_numbers(9,0), list, "Expected a list")
+        self.assertIsInstance(filter_numbers(9,0), "Expected a list")
         self.assertEqual(len(filter_numbers(9,7)), 8, "List is not expected length")
         self.assertEqual(filter_numbers(1, 5), [0,2,3,4,6,7,8,9], "Incorrect output")
         self.assertEqual(filter_numbers(0,4), [1,2,3,5,6,7,8,9], "Unexpected output")

@@ -12,7 +12,9 @@ def update_age(person, new_age):
 
 def add_phone_number(person, phone_number):
     """Adds a phone number to the given person dictionary."""
-    pass
+    
+    person["phone_number"] = phone_number
+    return person
 
 def remove_age(person):
     """Removes the age from the given person dictionary."""
