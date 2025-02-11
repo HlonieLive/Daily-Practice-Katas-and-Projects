@@ -7,7 +7,8 @@ def create_person(name: str, surname: str, age: int) -> dict:
 
 def update_age(person, new_age):
     """Updates the age of the given person."""
-    pass
+    person["age"] = new_age
+    return person
 
 def add_phone_number(person, phone_number):
     """Adds a phone number to the given person dictionary."""
