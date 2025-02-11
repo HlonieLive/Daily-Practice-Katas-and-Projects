@@ -23,7 +23,9 @@ def remove_age(person):
 
 def display_person_info(person):
     """Displays the information of the given person."""
-    pass
+    
+    for key, value in person.items():
+        print(f"{key}: {value}")
 
 def get_keys(person):
     """Returns a list of all keys in the given person dictionary."""
