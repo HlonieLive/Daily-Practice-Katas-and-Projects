@@ -56,7 +56,14 @@ def add_to_set(s, element):
 
 def process_data(data):
     """Processes a list of tuples into a dictionary where keys are names and values are sets of ages."""
-    pass
+    
+    dict1 = {}
+    for i in range(len(data)):
+        if data[i][0] not in dict1.keys():
+            dict1[data[i][0]] = {data[i][1]}
+        else:
+            dict1[data[i][0]].add(data[i][1])
+    return dict1
 
 def get_element_at_index(lst, index):
     """Returns the element at the specified index in the list. Raises IndexError if out of bounds."""
