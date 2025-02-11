@@ -18,7 +18,8 @@ def add_phone_number(person, phone_number):
 
 def remove_age(person):
     """Removes the age from the given person dictionary."""
-    pass
+    
+    del person["age"]
 
 def display_person_info(person):
     """Displays the information of the given person."""
