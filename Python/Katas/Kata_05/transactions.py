@@ -38,6 +38,15 @@ def remove_transaction(transactions: dict, customer: str, transaction_id: str) -
 def update_transaction_amount(transactions: dict, customer: str, transaction_id: str, new_amount: int) -> bool:
     """Updates the amount of a specific transaction for a customer"""
 
+    if transaction_id not in transactions.keys():
+        return False
+    
+    for transaction in transactions.values():
+        if transaction["customer"] == customer:
+            transaction["amount"] = new_amount
+    return transactions[transaction_id]["amount"] == new_amount
+
+
 
 
 
