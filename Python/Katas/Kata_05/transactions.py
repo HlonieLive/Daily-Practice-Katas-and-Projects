@@ -109,9 +109,29 @@ def clear_all_transactions(transactions: dict) -> None:
 def get_highest_spending_customer(transactions: dict) -> str:
     """Returns the customer who has spent the most in total"""
 
+    spending = {}
+    for transaction in transactions.values():
+        customer = transaction["customer"]
+        amount = transaction["amount"]
+        if customer in spending:
+            spending[customer] += amount
+        else:
+            spending[customer] = amount
+    return max(spending, key=spending.get)
+
 
 def get_lowest_spending_customer(transactions: dict) -> str:
     """Returns the customer who has spent the least in total"""
+
+    spending = {}
+    for transaction in transactions.values():
+        customer = transaction["customer"]
+        amount = transaction["amount"]
+        if customer in spending:
+            spending[customer] += amount
+        else:
+            spending[customer] = amount
+    return min(spending, key=spending.get)
 
 
 def get_average_spending(transactions: dict, customer: str) -> float:
