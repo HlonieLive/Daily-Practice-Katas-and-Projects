@@ -137,9 +137,19 @@ def get_lowest_spending_customer(transactions: dict) -> str:
 def get_average_spending(transactions: dict, customer: str) -> float:
     """Returns the average amount spent per transaction for a specific customer"""
 
+    total_spent = 0
+    transaction_count = 0
+    for transaction in transactions.values():
+        if transaction["customer"] == customer:
+            total_spent += transaction["amount"]
+            transaction_count += 1
+    return total_spent / transaction_count if transaction_count > 0 else 0.0
+
 
 def get_transaction_count(transactions: dict, customer: str) -> int:
     """Returns the total number of transactions for a specific customer"""
+
+    return sum(1 for transaction in transactions.values() if transaction["customer"] == customer)
 
 
 def get_transactions_in_range(transactions: dict, customer: str, min_amount: int, max_amount: int) -> list:
