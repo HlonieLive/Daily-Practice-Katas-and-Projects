@@ -154,7 +154,5 @@ def get_transaction_count(transactions: dict, customer: str) -> int:
 
 def get_transactions_in_range(transactions: dict, customer: str, min_amount: int, max_amount: int) -> list:
     """Returns a list of transactions for a customer within a specified amount range"""
+    return [{"id": transaction_id, **transaction} for transaction_id, transaction in transactions.items() if transaction["customer"] == customer and min_amount <= transaction["amount"] <= max_amount]
 
-
-def clear_all_transactions(transactions: dict) -> None:
-    """Clears all transactions from the dictionary"""
