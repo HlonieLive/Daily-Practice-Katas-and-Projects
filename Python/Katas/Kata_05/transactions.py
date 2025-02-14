@@ -20,21 +20,17 @@ def get_total_spent(transactions: dict, customer: str) -> int:
     for transaction in transactions.values():
         if transaction["customer"] == customer:
             total += transaction["amount"]
-    return total
+    return 
 
 def remove_transaction(transactions: dict, customer: str, transaction_id: str) -> bool:
     """Removes a transaction for a specific customer"""
 
     if transaction_id not in transactions.keys():
         return transaction_id in transactions
-    
-    if transaction_id in transactions.keys():
-        del transactions[transaction_id]
+    del transactions[transaction_id]
     
     return transaction_id not in transactions
     
- 
-
 def update_transaction_amount(transactions: dict, customer: str, transaction_id: str, new_amount: int) -> bool:
     """Updates the amount of a specific transaction for a customer"""
 
@@ -47,16 +43,20 @@ def update_transaction_amount(transactions: dict, customer: str, transaction_id:
     return transactions[transaction_id]["amount"] == new_amount
 
 
-
-
-
 def get_customer_transactions(transactions: dict, customer: str) -> list:
     """Returns a list of all transactions for a specific customer"""
 
+    customer_transactions = []
+    for key in transactions.keys():
+        if transactions[key]["customer"] == customer:
+            customer_transactions.append(key)
+    return customer_transactions
 
+            
 def get_all_customers(transactions: dict) -> list:
     """Returns a list of all unique customers in the transactions"""
-
+    
+    pass
 
 def get_highest_spending_customer(transactions: dict) -> str:
     """Returns the customer who has spent the most in total"""
