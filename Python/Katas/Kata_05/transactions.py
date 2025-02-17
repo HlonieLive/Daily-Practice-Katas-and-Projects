@@ -19,7 +19,7 @@ def get_total_spent(transactions: dict, customer: str) -> int:
     for transaction in transactions.values():
         if transaction["customer"] == customer:
             total += transaction["amount"]
-    return 
+    return total
 
 def remove_transaction(transactions: dict, customer: str, transaction_id: str) -> bool:
     """Removes a transaction for a specific customer"""
@@ -46,6 +46,7 @@ def update_transaction_amount(transactions: dict, customer: str, transaction_id:
 def get_customer_transactions(transactions: dict, customer: str) -> list:
     """Returns a list of all transactions for a specific customer"""
 
+    return [transaction for transaction in transactions.values() if transaction["customer"] == customer]
 
 def get_all_customers(transactions: dict) -> list:
     """Returns a list of all unique customers in the transactions"""
