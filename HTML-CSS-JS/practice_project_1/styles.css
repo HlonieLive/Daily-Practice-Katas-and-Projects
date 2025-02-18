@@ -1,8 +1,7 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    /* margin: 10px; */
-    padding: 10px;
+    width: auto;
     align-items: center;
     justify-content: center;
     height: auto;
@@ -12,14 +11,23 @@ body {
 .top-links {
     position: relative;
     top: 0;
-    height: 5%;
-    left: 90%;
+    left: 89%;
     width: 11%;
 }
 
 .icons {
     position: relative;
     margin-top: 10%;
+}
+
+.bottom-links {
+    position: relative;
+    top: 700px;
+    width:auto;
+    height: 45px;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: rgb(243, 243, 243);
 }
 
 .main {
