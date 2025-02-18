@@ -22,7 +22,8 @@ body {
 
 .bottom-links {
     position: relative;
-    top: 700px;
+    /* top: 800px; */
+    top: 750px;
     width:auto;
     height: 45px;
     padding: 10px;
