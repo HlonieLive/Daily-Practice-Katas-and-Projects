@@ -1,26 +1,31 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 10px;
-    padding: 20px;
+    /* margin: 10px; */
+    padding: 10px;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #fff;
+    height: auto;
+    background-color: #ffffff;
 }
 
-
 .top-links {
-    position: absolute;
-    top: 0; 
-    left: 88%;
+    position: relative;
+    top: 0;
+    height: 5%;
+    left: 90%;
+    width: 11%;
+}
+
+.icons {
+    position: relative;
+    margin-top: 10%;
 }
 
 .main {
     position:relative;
-    margin: 2%;
-    margin-bottom: 50px; 
-    margin-top: 11.5%; 
+    margin: 2%; 
+    margin-top: 6%; 
     height: 12%;
 }
 
@@ -69,6 +74,19 @@ body {
 
 .languages p a {
     text-decoration: none;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons input {
+    margin-right: 10px;
+    border: none;
+    width: 180px;
+    height: 40px;
+    font-size: 19px;
+    border-radius: 3px;
 }
 
 /* Footer styles */
