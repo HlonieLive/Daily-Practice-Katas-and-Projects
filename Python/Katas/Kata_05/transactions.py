@@ -26,9 +26,7 @@ def remove_transaction(transactions: dict, customer: str, transaction_id: str) -
 
     if transaction_id not in transactions.keys():
         return transaction_id in transactions
-    
-    if transaction_id in transactions.keys():
-        del transactions[transaction_id]
+    del transactions[transaction_id]
     
     return transaction_id not in transactions
 
@@ -47,6 +45,8 @@ def update_transaction_amount(transactions: dict, customer: str, transaction_id:
 
 def get_customer_transactions(transactions: dict, customer: str) -> list:
     """Returns a list of all transactions for a specific customer"""
+
+    return [transaction for transaction in transactions.values() if transaction["customer"] == customer]
 
 def get_all_customers(transactions: dict) -> list:
     """Returns a list of all unique customers in the transactions"""
@@ -155,4 +155,3 @@ def get_transaction_count(transactions: dict, customer: str) -> int:
 def get_transactions_in_range(transactions: dict, customer: str, min_amount: int, max_amount: int) -> list:
     """Returns a list of transactions for a customer within a specified amount range"""
     return [{"id": transaction_id, **transaction} for transaction_id, transaction in transactions.items() if transaction["customer"] == customer and min_amount <= transaction["amount"] <= max_amount]
-
