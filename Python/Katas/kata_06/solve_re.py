@@ -30,7 +30,9 @@ def remove_html_tags(html_text: str)->str:
     Use the `re` module to perform this task.
     """
     # Your implementation here
-    pass
+    tag_pattern = r'<[^>]+>'
+    plain_text = re.sub(tag_pattern, '', html_text)
+    return plain_text
 
 
 def validate_ip_address(ip:str)->bool:
