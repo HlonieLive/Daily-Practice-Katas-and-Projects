@@ -18,7 +18,9 @@ def extract_phone_numbers(text: str)->list:
     Use the `re` module to perform this task.
     """
     # Your implementation here
-    pass
+    phone_pattern = r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}'
+    phone_numbers = re.findall(phone_pattern, text)
+    return phone_numbers
 
 
 def remove_html_tags(html_text: str)->str:
