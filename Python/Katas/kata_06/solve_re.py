@@ -1,12 +1,14 @@
 import re
 
-def find_all_emails(text: str)->list:
+def find_all_emails(text: str) -> list:
     """
     TODO: Implement a function that takes a string `text` and returns all valid email addresses found in it.
     Use the `re` module to perform this task.
     """
     # Your implementation here
-    pass
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    emails = re.findall(email_pattern, text)
+    return emails
 
 
 def extract_phone_numbers(text: str)->list:

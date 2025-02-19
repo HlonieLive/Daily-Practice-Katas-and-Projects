@@ -1,5 +1,5 @@
 import unittest
-from re import find_all_emails, extract_phone_numbers, remove_html_tags, validate_ip_address, split_by_multiple_delimiters
+from solve_re import find_all_emails, extract_phone_numbers, remove_html_tags, validate_ip_address, split_by_multiple_delimiters
 
 class TestRegexFunctions(unittest.TestCase):
 
