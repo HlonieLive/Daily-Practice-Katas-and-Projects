@@ -13,8 +13,14 @@ This is a Python implementation of the classic "Rock-Paper-Scissors" game, exten
 
 ## How to Play 
 
-        Run the script in a Python environment.
-        When prompted, enter your choice: rock, paper, scissors, lizard, or spock.
-        The CPU will randomly select one of the five options.
-        The game will determine the winner based on the rules above.
-        If you want to quit the game at any time, type q.
+### Run the script in a Python environment.
+        python rpy.py
+
+### When prompted, enter your choice:
+        rock, paper, scissors, lizard, or spock.
+        
+### The CPU will randomly select one of the five options.
+
+### The game will determine the winner based on the rules above.
+
+### If you want to quit the game at any time, type q.
