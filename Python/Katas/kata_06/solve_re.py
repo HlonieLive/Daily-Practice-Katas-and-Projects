@@ -42,7 +42,14 @@ def validate_ip_address(ip:str)->bool:
     Use the `re` module to perform this task.
     """
     # Your implementation here
-    pass
+    ip_pattern = r'^(\d{1,3}\.){3}\d{1,3}$'
+    if re.match(ip_pattern, ip):
+        parts = ip.split('.')
+        for part in parts:
+            if int(part) > 255:
+                return False
+        return True
+    return False
 
 
 def split_by_multiple_delimiters(text: str, delimiters: list)->list:
