@@ -58,4 +58,5 @@ def split_by_multiple_delimiters(text: str, delimiters: list)->list:
     Use the `re` module to perform this task.
     """
     # Your implementation here
-    pass
+    delimiters_pattern = '|'.join(map(re.escape, delimiters))
+    return re.split(delimiters_pattern, text)
