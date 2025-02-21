@@ -24,7 +24,12 @@ based on the following rules:
 def validate_email(email):
     # Your implementation here
 
-    pass
+    if email.count('@') != 1:
+        return False
+    local, domain = email.split('@')
+    if not local or not domain or domain.startswith('.') or domain.endswith('.') or '.' not in domain:
+        return False
+    return True
 
 """TODO: Question 4 - Control Structures
 Write a function `find_max_value(matrix)` that takes a 2D list (matrix) of integers
