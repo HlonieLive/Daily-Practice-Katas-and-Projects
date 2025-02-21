@@ -13,7 +13,7 @@ Write a function `filter_positive_numbers(numbers)` that takes a list of numbers
 (integers or floats) and returns a new list containing only the positive numbers."""
 def filter_positive_numbers(numbers: list):
     # Your implementation here
-    pass
+    return [number for number in numbers if number > 0]
 
 """TODO: Question 3 - Validations
 Write a function `validate_email(email)` that checks if an email address is valid
