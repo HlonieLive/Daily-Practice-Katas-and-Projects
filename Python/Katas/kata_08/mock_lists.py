@@ -6,7 +6,7 @@ and returns a dictionary where:
 """
 def get_unique_values(data: list):
     # Your implementation here
-    pass
+    return {item: data.count(item) for item in data}
 
 """TODO: Question 2 - Data Manipulation
 Write a function `filter_positive_numbers(numbers)` that takes a list of numbers

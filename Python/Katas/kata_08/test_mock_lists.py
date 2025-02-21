@@ -1,5 +1,5 @@
 import unittest
-from mock import (
+from mock_lists import (
     get_unique_values,
     filter_positive_numbers,
     validate_email,
