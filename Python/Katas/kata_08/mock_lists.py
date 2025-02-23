@@ -55,7 +55,6 @@ Input: [1, [2, [3, 4], 5], 6]
 Output: [1, 2, 3, 4, 5, 6]"""
 def flatten_nested_list(nested_list):
     # Your implementation here
-    # return [i if type(number) == list else number for number in nested_list for i in number]
     lst1 = []
     for number in nested_list:
         if type(number) == list:
