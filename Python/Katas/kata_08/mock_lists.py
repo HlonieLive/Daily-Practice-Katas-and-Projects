@@ -36,7 +36,7 @@ Write a function `find_max_value(matrix)` that takes a 2D list (matrix) of integ
 as input and returns the maximum value in the matrix."""
 def find_max_value(matrix):
     # Your implementation here
-    pass
+    return max([value for i in range(len(matrix)) for value in matrix[i]])
 
 """TODO: Question 5 - Algorithmic Thinking
 Write a function `is_palindrome(s)` that checks if a given string is a palindrome.

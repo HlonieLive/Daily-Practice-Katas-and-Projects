@@ -1,18 +1,5 @@
 import unittest
-from mock_lists import (
-    get_unique_values,
-    filter_positive_numbers,
-    validate_email,
-    find_max_value,
-    is_palindrome,
-    flatten_nested_list,
-    longest_common_prefix,
-    count_primes,
-    merge_sorted_arrays,
-    fibonacci,
-    bfs,
-    coin_change
-)
+from mock_lists import *
 
 class TestMockExam(unittest.TestCase):
 
