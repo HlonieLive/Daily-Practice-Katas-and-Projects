@@ -44,7 +44,10 @@ A palindrome is a string that reads the same backward as forward. Ignore spaces,
 punctuation, and capitalization."""
 def is_palindrome(s):
     # Your implementation here
-    pass
+    s = "".join(s.lower().split())
+    return s == s[::-1]
+
+print(is_palindrome("A man a plan a canal Panama"))
 
 """TODO: Question 6 - Advanced Data Structures
 Write a function `flatten_nested_list(nested_list)` that takes a nested list of integers
