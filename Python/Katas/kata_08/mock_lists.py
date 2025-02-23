@@ -94,8 +94,15 @@ Example:
 Input: 10
 Output: 4 (primes: 2, 3, 5, 7)"""
 def count_primes(n):
-    # Your implementation here
-    pass
+    if n < 2:
+        return 0
+    primes = [True] * n
+    primes[0] = primes[1] = False
+    for i in range(2, int(n**0.5) + 1):
+        if primes[i]:
+            for j in range(i*i, n, i):
+                primes[j] = False
+    return sum(primes)
 
 """TODO: Question 9 - Advanced Algorithmic Thinking
 Write a function `merge_sorted_arrays(arr1, arr2)` that merges two sorted arrays into
