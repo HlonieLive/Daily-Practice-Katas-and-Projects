@@ -47,8 +47,6 @@ def is_palindrome(s):
     s = "".join(s.lower().split())
     return s == s[::-1]
 
-print(is_palindrome("A man a plan a canal Panama"))
-
 """TODO: Question 6 - Advanced Data Structures
 Write a function `flatten_nested_list(nested_list)` that takes a nested list of integers
 and returns a single flattened list.
@@ -57,7 +55,22 @@ Input: [1, [2, [3, 4], 5], 6]
 Output: [1, 2, 3, 4, 5, 6]"""
 def flatten_nested_list(nested_list):
     # Your implementation here
-    pass
+    # return [i if type(number) == list else number for number in nested_list for i in number]
+    lst1 = []
+    for number in nested_list:
+        if type(number) == list:
+            for i in number:
+                lst1.append(i)
+        else:
+            lst1.append(number)
+    lst2 = []
+    for number in lst1:
+        if type(number) == list:
+            for i in number:
+                lst2.append(i)
+            lst1.remove(number)
+    lst1 += lst2
+    return sorted(lst1)
 
 """TODO: Question 7 - Algorithmic Thinking
 Write a function `longest_common_prefix(strs)` that finds the longest common prefix
