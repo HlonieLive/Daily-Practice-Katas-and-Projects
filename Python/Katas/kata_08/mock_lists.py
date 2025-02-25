@@ -112,7 +112,8 @@ Input: arr1 = [1, 3, 5], arr2 = [2, 4, 6]
 Output: [1, 2, 3, 4, 5, 6]"""
 def merge_sorted_arrays(arr1, arr2):
     # Your implementation here
-    pass
+    
+    return sorted(arr1 + arr2)
 
 """TODO: Question 10 - Recursion
 Write a function `fibonacci(n)` that computes the nth Fibonacci number using recursion.
