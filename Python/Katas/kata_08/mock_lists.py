@@ -122,7 +122,12 @@ Input: 5
 Output: 5 (Fibonacci sequence: 0, 1, 1, 2, 3, 5)"""
 def fibonacci(n):
     # Your implementation here
-    pass
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-2) + fibonacci(n-1)
 
 """TODO: Question 11 - Graph Traversal
 Write a function `bfs(graph, start_node)` that performs a breadth-first search (BFS)
