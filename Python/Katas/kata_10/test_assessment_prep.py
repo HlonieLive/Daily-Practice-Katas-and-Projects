@@ -64,7 +64,7 @@ class TestMockTest(unittest.TestCase):
     # Test Pascal's Triangle generation
     def test_generate_pascals_triangle(self):
         self.assertEqual(generate_pascals_triangle(0), [])
-        self.assertEqual(generate_pascals_triangle(1), <button class="citation-flag" data-index="1">)
+        self.assertEqual(generate_pascals_triangle(1), [[1]])
         self.assertEqual(generate_pascals_triangle(2), [[1], [1, 1]])
         self.assertEqual(generate_pascals_triangle(3), [[1], [1, 1], [1, 2, 1]])
         self.assertEqual(generate_pascals_triangle(4), [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]])

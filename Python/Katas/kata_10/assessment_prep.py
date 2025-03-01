@@ -9,7 +9,7 @@ def reverse_string_recursive(input_str):
     :return: str - The reversed string.
     """
     # Your implementation here
-    pass
+    return input_str[::-1].lower()
 
 
 # TODO 2: Create a class that implements a stack data structure using a list.
