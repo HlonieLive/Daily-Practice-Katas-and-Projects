@@ -9,7 +9,10 @@ def reverse_string_recursive(input_str):
     :return: str - The reversed string.
     """
     # Your implementation here
-    return input_str[::-1].lower()
+    if len(input_str) == 0:
+        return input_str
+    else:
+        return reverse_string_recursive(input_str[1:]) + input_str[0]
 
 
 # TODO 2: Create a class that implements a stack data structure using a list.
@@ -66,7 +69,21 @@ def is_prime(number):
     :return: bool - True if prime, False otherwise.
     """
     # Your implementation here
-    pass
+    prime_numbers = []
+    
+    for num in range(2, number+1):
+        holder = []
+        for divider in range(1, number+1):
+            if num%divider == 0:
+                holder.append(num)
+        if len(holder) == 2:
+            prime_numbers.append(num)
+    print(prime_numbers)
+    if number in prime_numbers:
+        return True
+    return False
+
+print(is_prime(47))
 
 
 # TODO 4: Implement a function to calculate the factorial of a number using iteration.
