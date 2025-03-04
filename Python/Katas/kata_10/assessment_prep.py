@@ -83,8 +83,6 @@ def is_prime(number):
         return True
     return False
 
-print(is_prime(47))
-
 
 # TODO 4: Implement a function to calculate the factorial of a number using iteration.
 def factorial_iterative(n):
@@ -94,7 +92,14 @@ def factorial_iterative(n):
     :return: int - The factorial of the number.
     """
     # Your implementation here
-    pass
+    if not isinstance(n, int):
+        raise ValueError()
+    
+    if n == 0:
+        return 1
+    else:
+        return n*(factorial_iterative(n-1))
+        
 
 
 # TODO 5: Write a function to process user input and validate it as an integer.
@@ -104,7 +109,10 @@ def get_user_input():
     :return: int - The validated integer input.
     """
     # Your implementation here
-    pass
+    num = int(input("Enter an integer: "))
+    if not isinstance(num, int):
+        raise ValueError()
+    return num
 
 
 # TODO 6: Generate Pascal's Triangle up to a given number of rows.
@@ -115,7 +123,15 @@ def generate_pascals_triangle(num_rows):
     :return: List[List[int]] - The Pascal's Triangle as a list of lists.
     """
     # Your implementation here
-    pass
+    import math
+    list1 = [] 
+    for i in range(num_rows):
+        list2 = []
+        list2.append(math.comb(num_rows, i))
+        list1.append(list2)
+    return list2
+
+print(generate_pascals_triangle(5))
 
 
 # TODO 7: Print a right-angled triangle pattern with stars.
@@ -135,8 +151,8 @@ def print_pyramid(height):
     :param height: int - The height of the pyramid.
     """
     # Your implementation here
-    pass
-
+    for i in range(1, height+1):
+        print(" "*(height-i) + "*"*(2*i-1))
 
 # TODO 9: Print a square pattern with stars.
 def print_square(side_length):
