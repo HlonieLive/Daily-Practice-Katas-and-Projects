@@ -141,7 +141,8 @@ def print_right_angled_triangle(height):
     :param height: int - The height of the triangle.
     """
     # Your implementation here
-    pass
+    for i in range(1, height+1):
+        print("*"*i)
 
 
 # TODO 8: Print a pyramid pattern with stars.
