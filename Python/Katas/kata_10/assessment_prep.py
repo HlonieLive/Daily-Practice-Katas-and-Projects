@@ -131,7 +131,7 @@ def generate_pascals_triangle(num_rows):
         list1.append(list2)
     return list2
 
-print(generate_pascals_triangle(5))
+# print(generate_pascals_triangle(5))
 
 
 # TODO 7: Print a right-angled triangle pattern with stars.
@@ -143,7 +143,7 @@ def print_right_angled_triangle(height):
     # Your implementation here
     for i in range(1, height+1):
         print("*"*i)
-
+print_right_angled_triangle(6)
 
 # TODO 8: Print a pyramid pattern with stars.
 def print_pyramid(height):
@@ -154,6 +154,7 @@ def print_pyramid(height):
     # Your implementation here
     for i in range(1, height+1):
         print(" "*(height-i) + "*"*(2*i-1))
+print_pyramid(5)
 
 # TODO 9: Print a square pattern with stars.
 def print_square(side_length):
@@ -162,4 +163,7 @@ def print_square(side_length):
     :param side_length: int - The length of the sides of the square.
     """
     # Your implementation here
-    pass
+    for _ in range(side_length):
+        print("*"*side_length)
+        
+print_square(5)
