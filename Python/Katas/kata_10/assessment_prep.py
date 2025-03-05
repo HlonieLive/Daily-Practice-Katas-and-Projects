@@ -71,7 +71,6 @@ def is_prime(number):
     """
     # Your implementation here
     prime_numbers = []
-    
     for num in range(2, number+1):
         holder = []
         for divider in range(1, number+1):
@@ -79,10 +78,12 @@ def is_prime(number):
                 holder.append(num)
         if len(holder) == 2:
             prime_numbers.append(num)
-    print(prime_numbers)
+    # print(prime_numbers)
     if number in prime_numbers:
         return True
     return False
+
+print(is_prime(50))
 
 
 # TODO 4: Implement a function to calculate the factorial of a number using iteration.
