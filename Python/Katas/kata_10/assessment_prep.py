@@ -26,7 +26,7 @@ class Stack:
         Initialize an empty stack.
         """
         # Your implementation here
-        pass
+        self.stack = []
 
     def push(self, item):
         """
@@ -34,7 +34,7 @@ class Stack:
         :param item: Any - The item to add.
         """
         # Your implementation here
-        pass
+        self.stack.append(item)
 
     def pop(self):
         """
@@ -42,23 +42,24 @@ class Stack:
         :return: Any - The top item.
         """
         # Your implementation here
-        pass
+        return self.stack.pop()
 
     def peek(self):
         """
         Return the top item without removing it.
         :return: Any - The top item.
         """
-        # Your implementation here
-        pass
+        if not self.is_empty():
+            return self.stack[-1]
+        else:
+            raise IndexError("peek from empty stack")
 
     def is_empty(self):
         """
         Check if the stack is empty.
         :return: bool - True if empty, False otherwise.
         """
-        # Your implementation here
-        pass
+        return len(self.stack) == 0
 
 
 # TODO 3: Write a function to check if a number is prime.
