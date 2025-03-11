@@ -10,6 +10,12 @@ class Student:
         self.age = age
         self.grades = []
 
+    def add_grades(self, grade):
+        if grade not in range(101):
+            raise ValueError("Grades can't be negative or greater than 100!")
+                    
+        return self.grades.append(grade)
+
 
 # TODO 2: Create a function `get_positive_integer` that prompts the user for input until a valid positive integer is entered.
 def get_positive_integer(prompt="Enter a positive integer: "):
