@@ -5,7 +5,10 @@
 #         - Display student information (name, age, and average grade).
 
 class Student:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.grades = []
 
 
 # TODO 2: Create a function `get_positive_integer` that prompts the user for input until a valid positive integer is entered.
