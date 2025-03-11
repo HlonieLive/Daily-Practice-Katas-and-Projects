@@ -15,6 +15,11 @@ class Student:
             raise ValueError("Grades can't be negative or greater than 100!")
                     
         return self.grades.append(grade)
+    
+    def calculate_average(self):
+        if self.grades == []:
+            return "The are no Grades available!"
+        return sum(self.grades)/len(self.grades)
 
 
 # TODO 2: Create a function `get_positive_integer` that prompts the user for input until a valid positive integer is entered.
