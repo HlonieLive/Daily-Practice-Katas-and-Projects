@@ -24,7 +24,13 @@ class Student:
 
 # TODO 2: Create a function `get_positive_integer` that prompts the user for input until a valid positive integer is entered.
 def get_positive_integer(prompt="Enter a positive integer: "):
-    pass
+    positive_integer = int(input(prompt))
+    while positive_integer < 0:
+        print("\nNumber must be greater than 0!\n")
+        positive_integer = int(input(prompt))
+    return f"\nThe positive integer is: {positive_integer}"
+
+print(get_positive_integer())
 
 
 # TODO 3: Implement a function `find_common_elements` that takes two lists and returns their common elements using a set.
