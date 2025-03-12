@@ -41,7 +41,16 @@ def find_common_elements(list1, list2):
 # TODO 4: Write a program that uses a loop to repeatedly ask the user for numbers until they type 'done'.
 #         Store the numbers in a list and then calculate the sum and average.
 def collect_numbers():
-    pass
+
+    numbers = []
+    reply = input("Enter a number: \nType 'done' to exit!")
+    while reply != "done":
+        numbers.append(int(reply))
+        reply = input("Enter a number: \nType 'done' to exit!")
+    sum_of_num = sum(numbers)
+    average = sum_of_num/len(numbers)
+    
+    return f"The sum of numbers is:     {sum_of_num}\nThe average of numbers is:    {average}"
 
 
 # TODO 5: Create a dictionary-based menu system where the user can select options by entering a number.
