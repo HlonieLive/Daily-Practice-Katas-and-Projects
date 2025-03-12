@@ -35,7 +35,7 @@ print(get_positive_integer())
 
 # TODO 3: Implement a function `find_common_elements` that takes two lists and returns their common elements using a set.
 def find_common_elements(list1, list2):
-    pass
+    return set([element for element in list1 if element in list2])
 
 
 # TODO 4: Write a program that uses a loop to repeatedly ask the user for numbers until they type 'done'.
