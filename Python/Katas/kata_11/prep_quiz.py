@@ -30,7 +30,7 @@ def get_positive_integer(prompt="Enter a positive integer: "):
         positive_integer = int(input(prompt))
     return f"\nThe positive integer is: {positive_integer}"
 
-print(get_positive_integer())
+# print(get_positive_integer())
 
 
 # TODO 3: Implement a function `find_common_elements` that takes two lists and returns their common elements using a set.
@@ -59,7 +59,31 @@ def collect_numbers():
 #         2) Display all students (show their details using the `display_info` method).
 #         3) Exit the program.
 def menu_system():
-    pass
+    students = {}
+    options = ["1) Add a student", "2) Display all students", "3) Exit the program."]
+
+    print("Options:\n")
+    for option in options:
+        print(option)
+    selected_option = input("Enter 1, 2 or 3: ")
+    if selected_option == "1":
+        print("New Student:\n\n")
+        name = input("Enter student name: ")
+        age = int(input("Enter student age: "))
+        students["Student name"] = name
+        students["Student age"] = age
+        new_student = Student(name, age)
+    elif selected_option == "2":
+        print("Students Information:\n")
+        for key, value in students.items():
+            print(f"{key}: {value}")
+        return
+    elif selected_option == "3":
+        print("Exiting the program...")
+    
+    return students
+
+print(menu_system())
 
 
 # TODO 6: Implement a function `is_palindrome` that checks if a given string is a palindrome (case-insensitive).
