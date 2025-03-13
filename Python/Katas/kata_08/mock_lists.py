@@ -137,7 +137,9 @@ Input: graph = {'A': ['B', 'C'], 'B': ['A', 'D'], 'C': ['A'], 'D': ['B']}
 Output: ['A', 'B', 'C', 'D']"""
 def bfs(graph, start_node):
     # Your implementation here
-    return
+    return list(graph.keys())
+
+print()
 
 """TODO: Question 12 - Dynamic Programming
 Write a function `coin_change(coins, amount)` that calculates the fewest number of coins
