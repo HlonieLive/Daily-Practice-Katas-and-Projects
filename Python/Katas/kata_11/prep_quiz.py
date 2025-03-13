@@ -70,14 +70,12 @@ def menu_system():
         print("New Student:\n\n")
         name = input("Enter student name: ")
         age = int(input("Enter student age: "))
-        students["Student name"] = name
-        students["Student age"] = age
+        students[name] = new_student
         new_student = Student(name, age)
     elif selected_option == "2":
         print("Students Information:\n")
-        for key, value in students.items():
-            print(f"{key}: {value}")
-        return
+        for student in students.values():
+            print(f"Name: {student.name}, Age: {student.age}, Average Grade: {student.calculate_average()}")
     elif selected_option == "3":
         print("Exiting the program...")
     
