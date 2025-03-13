@@ -98,8 +98,13 @@ print(menu_system())
 
 # TODO 6: Implement a function `is_palindrome` that checks if a given string is a palindrome (case-insensitive).
 #         Ignore non-alphanumeric characters.
-def is_palindrome(s):
-    pass
+def is_palindrome(s:str):
+    str1 =""
+    for char in s.strip().lower():
+        if char.isalpha():
+            str1 += char
+    return  str1== str1[::-1]
+# print(is_palindrome("rac, ecar"))
 
 
 # TODO 7: Implement a function `merge_sorted_lists` that takes two sorted lists and merges them into a single sorted list.
