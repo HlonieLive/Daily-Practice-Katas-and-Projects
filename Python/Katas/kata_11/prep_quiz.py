@@ -67,19 +67,31 @@ def menu_system():
         print(option)
     selected_option = input("Enter 1, 2 or 3: ")
     if selected_option == "1":
-        print("New Student:\n\n")
+        print("\nAdd New Student...\n")
         name = input("Enter student name: ")
         age = int(input("Enter student age: "))
-        students[name] = new_student
+        students["name"] = name
+        students["age"] = age
         new_student = Student(name, age)
+        return f"{students['name']} is successfully added."
     elif selected_option == "2":
-        print("Students Information:\n")
-        for student in students.values():
-            print(f"Name: {student.name}, Age: {student.age}, Average Grade: {student.calculate_average()}")
+        if students == {}:
+            print("No Students Yet!\n")
+            print("Add New Student(s):\n\n")
+            name = input("Enter student name: ")
+            age = int(input("Enter student age: "))
+            students["name"] = name
+            students["age"] = age
+            new_student = Student(name, age)
+
+        print("\nStudents Information:\n")
+        for key, value in students.items():
+            print(f"{key.capitalize()}: {value}")
+
+        return f"Grade: {new_student.calculate_average()}"
     elif selected_option == "3":
-        print("Exiting the program...")
-    
-    return students
+        return "Exiting the program..."
+
 
 print(menu_system())
 
