@@ -32,5 +32,7 @@ public class WeightConverter {
             newWeight = weight / 0.453592;
             System.out.println("The new weight in lbs is: "+ newWeight);
         } else System.out.println("Invalid Choice");
+
+        scanner.close();
     }
 }
