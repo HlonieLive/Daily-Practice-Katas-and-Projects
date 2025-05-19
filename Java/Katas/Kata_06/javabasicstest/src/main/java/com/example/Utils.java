@@ -43,7 +43,13 @@ public class Utils {
 
     // Task 5: Generate multiplication table (2D array)
     public static int[][] generateMultiplicationTable(int rows, int cols) {
-        // TODO: Implement this
-        return new int[rows][cols];
+        int[][] table = new int[rows][cols];
+
+        for (int i  = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                table[i][j] = (i + 1)*(j + 1);
+            }
+        }
+        return table;
     }
 }
