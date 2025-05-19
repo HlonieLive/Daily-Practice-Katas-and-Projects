@@ -11,8 +11,13 @@ public class Utils {
 
     // Task 2: Reverse a string
     public static String reverse(String input) {
-        // TODO: Implement this
-        return "";
+        String reversed = "";
+
+        for (int i = 0; i < input.length(); i++) {
+            int j = input.length() - 1 - i;
+            reversed += input.charAt(j);
+        }
+        return reversed;
     }
 
     // Task 3: Sum elements in an array
