@@ -22,8 +22,12 @@ public class Utils {
 
     // Task 3: Sum elements in an array
     public static int sumArray(int[] numbers) {
+        int sum = 0;
 
-        return 0;
+        for (int number: numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
     // Task 4: Check if a string is a palindrome
