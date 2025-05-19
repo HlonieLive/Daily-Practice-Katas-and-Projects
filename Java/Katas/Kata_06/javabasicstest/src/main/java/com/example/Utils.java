@@ -6,8 +6,7 @@ public class Utils {
 
     // Task 1: Return true if number is even
     public static boolean isEven(int number) {
-        //TODO: Implement this
-        return true;
+        return number % 2 == 0;
     }
 
     // Task 2: Reverse a string
