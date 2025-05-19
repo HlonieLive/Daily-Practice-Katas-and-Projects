@@ -32,8 +32,13 @@ public class Utils {
 
     // Task 4: Check if a string is a palindrome
     public static boolean isPalindrome(String word) {
-        // TODO: Implement this
-        return false;
+        String reversed = "";
+
+        for (int i = 0; i < input.length(); i++) {
+            int j = input.length() - 1 - i;
+            reversed += input.charAt(j);
+        }
+        return reversed.equalsIgnoreCase(word);
     }
 
     // Task 5: Generate multiplication table (2D array)
